@@ -1,0 +1,34 @@
+.bg-color-system {
+    background-color: #027373;
+}
+
+.bg-color-menu{
+    background-color: #03A696;
+}
+
+.form-focus:focus {
+    border: none;
+    outline: none;
+}
+
+.bg-hover:hover {
+    background-color: #03A696;
+}
+
+.shadow-custom {
+    box-shadow: 3px 4.5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-custom {
+    color: #027373 !important;
+    font-weight: 600;
+}
+
+.text-custom:hover {
+    text-decoration: underline !important;
+}
+
+.card-scale {
+    transform: scale(.9); 
+    transform-origin: center; 
+}

@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="profile-data">
+    <div class="card-profile">
+      <img src="/assets/images/profile.png" alt="Profile Image">
+      <div class="info-card">
+        <h4> {{ profileUser.name + " " + profileUser.lastname }} </h4>
+        <span> {{ profileUser.occupation }} </span>
+        <p>{{ profileUser.sector }}</p>
+      </div>
+    </div>
+    <div class="btn-edit" (click)="editProfile()">
+      <span>Editar Perfil</span>
+      <div class="img">
+        <img src="/assets/icons/edit.png" alt="Icon Edit">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="user-data">
+    <h3>Informações Pessoais</h3>
+    <div class="user-data-content">
+      <div class="info-data">
+        <p>Nome Completo</p>
+        <span> {{ profileUser.name + " " + profileUser.lastname }} </span>
+      </div>
+      <div class="info-data">
+        <p>Telefone</p>
+        <span>{{ profileUser.phone }}</span>
+      </div>
+      <div class="info-data">
+        <p>E-mail</p>
+        <span>{{ profileUser.email }}</span>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="professional-data">
+    <h3>Informações Profissionais</h3>
+    <div class="professional-data-content">
+      <div class="info-data">
+        <p>Função</p>
+        <span>{{ profileUser.occupation }}</span>
+      </div>
+      <div class="info-data">
+        <p>Setor/Departamento</p>
+        <span>{{ profileUser.sector }}</span>
+      </div>
+      <div class="info-data">
+        <p>Núcleo Operacional de Origem/Agência</p>
+        <span>{{ profileUser.nop }}</span>
+      </div>
+    </div>
+  </div>
+</div>
