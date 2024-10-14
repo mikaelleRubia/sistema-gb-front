@@ -7,7 +7,7 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "url": "https://sistema-gb-front.onrender.com"
     },
     {
       "name": "ng test",

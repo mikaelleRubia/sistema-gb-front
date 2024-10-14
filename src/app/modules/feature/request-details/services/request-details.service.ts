@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class RequestDetailsService {
 
-  private baseUrl = 'http://localhost:4200/rota';
+  private baseUrl = 'https://sistema-gb-front.onrender.com/rota';
 
   constructor(private http: HttpClient) { }
 
