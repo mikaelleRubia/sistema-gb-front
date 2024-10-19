@@ -1,8 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { NgxPaginationModule } from 'ngx-pagination';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/core/login/component/login.component';
@@ -23,13 +22,21 @@ import { CheckRequestsComponent } from './modules/feature/check-requests/compone
 import { MainProfileComponent } from './modules/core/profile/components/main-profile/main-profile.component';
 import { UserDataComponent } from './modules/core/profile/components/user-data/user-data.component';
 import { EditUserDataComponent } from './modules/core/profile/components/edit-user-data/edit-user-data.component';
-import { RequestDetailsComponent } from './modules/feature/request-details/component/request-details.component';
+import { RequestDetailsComponent } from './modules/feature/request-details/components/request-details/request-details.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ProfileRoutingModule } from './modules/core/profile/components/main-profile/profile-routing.module';
-import { CreateRequestComponent } from './modules/feature/create-request/component/create-request.component';
+import { MainCreateRequestComponent } from './modules/feature/create-request/components/main-create-request/main-create-request.component';
 
 import { NgScrollbarModule } from 'ngx-scrollbar';
+
 import { ColorClassDirective } from './modules/directives/colorClass/color-class.directive';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { PhoneMaskDirective } from './modules/directives/phone-mask/phone-mask.directive';
+import { FullLuminousRequestComponent } from './modules/feature/create-request/components/full-luminous-request/full-luminous-request.component';
+  
+import { AgencyBoardComponent } from './modules/feature/request-details/components/agency-board/agency-board.component';
+import { SignpostComponent } from './modules/feature/request-details/components/signpost/signpost.component';
+import { DialogBoxComponent } from './modules/feature/request-details/components/dialog-box/dialog-box.component';
 
 @NgModule({
   declarations: [
@@ -48,26 +55,32 @@ import { ColorClassDirective } from './modules/directives/colorClass/color-class
     UserDataComponent,
     EditUserDataComponent,
     RequestDetailsComponent,
-    CreateRequestComponent,
-    ColorClassDirective
+    MainCreateRequestComponent,
+    ColorClassDirective,
+    PhoneMaskDirective,
+    FullLuminousRequestComponent,
+    AgencyBoardComponent,
+    SignpostComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatPaginatorModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule,
     NgCircleProgressModule.forRoot({
     }),
     ProfileRoutingModule,
     NgScrollbarModule,
-    
+
   ],
   providers: [
     provideHttpClient(withFetch()),
     provideToastr(),
-    provideAnimations()
+    provideAnimations(),
+    provideAnimationsAsync()
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
